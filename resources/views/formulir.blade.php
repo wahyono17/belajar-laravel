@@ -7,9 +7,13 @@
     <title>formulir</title>
 </head>
 <body>
-    <p>ini adalah formulir</p>
-    <p>jangan lelah belajar hal baru karena pengetahuan terus berkembang
-    coba edit di git hub bagaimana tampil di local
-    </p>
+    <form action="formulir/proses" method="post">
+    <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
+    Nama :
+    <input type="text" name="nama" ><br>
+    Alamat :
+    <input type="text" name="alamat"> <br>
+    <input type="submit" value="simpan">
+    </form>
 </body>
 </html>
