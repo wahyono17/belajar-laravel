@@ -32,3 +32,5 @@ Route::get('/blog', 'BlogController@home');
 Route::get('/blog/tentang', 'BlogController@tentang');
 Route::get('/blog/kontak', 'BlogController@kontak');
 
+//router crud
+Route::get('/pegawai', 'PegawaiController@index');
