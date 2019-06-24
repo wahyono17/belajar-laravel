@@ -14,8 +14,17 @@
     <table border="1">
         <tr>
             <th>nama</th> <th>jabatan</th> <th>umur</th> <th>alamat</th>
+            <th>Opsi</th>
         </tr>
-        
+        @foreach ($karyawan as $item)
+        <tr>
+            <td>{{$item->nama}}</td> <td>{{$item->jabatan}}</td> <td>{{$item->umur}}</td> <td>{{$item->alamat}}</td>
+            <td>
+                <a href="/pegawai/edit/{{$item->id}}">Edit</a> |
+                <a href="/pegawai/hapus/{{$item->id}}">Hapus</a>
+            </td>
+        </tr>
+        @endforeach
     </table>
 </body>
 </html>

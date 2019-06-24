@@ -34,3 +34,7 @@ Route::get('/blog/kontak', 'BlogController@kontak');
 
 //router crud
 Route::get('/pegawai', 'PegawaiController@index');
+Route::get('/pegawai/tambah', 'PegawaiController@tambah');
+Route::post('/pegawai/post', 'PegawaiController@post');
+Route::get('/pegawai/edit/{id}', 'PegawaiController@edit');
+Route::post('/pegawai/update', 'PegawaiController@update');
