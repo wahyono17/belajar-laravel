@@ -7,19 +7,14 @@
     <title>tambah data</title>
 </head>
 <body>
-    {{-- menampilkan error validasi --}}
-    @if (count($errors) > 0)
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
-    <form action="/pegawai/post" method="post">
+    
+    <form action="/karyawan/post" method="post">
         {{ csrf_field() }}
         Nama <input type="text" name="nama" required="required" value="{{old('nama')}}"> 
+        @if ($errors->has('nama'))
+            <br>
+            {{$errors->first('nama')}}    
+        @endif
         <br>
         Jabatan <input type="text" name="jabatan" required="required" value="{{old('jabatan')}}"><br>
         Umur <input type="text" name="umur" required="required" value="{{old('umur')}}"><br>

@@ -17,7 +17,7 @@
         </style>
 
     <h3>data karyawan</h3>
-    <a href="pegawai/tambah">tambah data baru</a>
+    <a href="karyawan/tambah">tambah data baru</a>
     <br>
     <br>
     <form action="/pegawai/cari" method="GET" class="form-inline">
@@ -34,19 +34,13 @@
         <tr>
             <td>{{$item->nama}}</td> <td>{{$item->jabatan}}</td> <td>{{$item->umur}}</td> <td>{{$item->alamat}}</td>
             <td>
-                <a class="btn btn-sm" href="/pegawai/edit/{{$item->id}}">Edit</a> |
-                <a class="btn btn-sm" href="/pegawai/hapus/{{$item->id}}">Hapus</a>
+                <a class="btn btn-sm" href="/karyawan/edit/{{$item->ID}}">Edit</a> |
+                <a class="btn btn-sm" href="/karyawan/hapus/{{$item->ID}}">Hapus</a>
             </td>
         </tr>
         @endforeach
     </table>
 
-    Halaman {{$karyawan->currentPage()}}<br>
-    Jumlah data {{$karyawan->total()}}<br>
-    Data perHalaman {{$karyawan->perPage()}}<br>
-
-    
-    {{$karyawan->links()}}
     
 </div>
 </body>

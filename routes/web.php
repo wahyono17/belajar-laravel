@@ -36,5 +36,15 @@ Route::get('/blog/kontak', 'BlogController@kontak');
 Route::get('/pegawai', 'PegawaiController@index');
 Route::get('/pegawai/tambah', 'PegawaiController@tambah');
 Route::post('/pegawai/post', 'PegawaiController@post');
+
 Route::get('/pegawai/edit/{id}', 'PegawaiController@edit');
 Route::post('/pegawai/update', 'PegawaiController@update');
+Route::get('/pegawai/hapus/{id}', 'PegawaiController@hapus');
+Route::get('/pegawai/cari', 'PegawaiController@cari');
+
+//coba eloquent
+Route::get('/karyawan', 'KaryawanController@index');
+Route::get('/karyawan/tambah', 'KaryawanController@tambah');
+Route::post('/karyawan/post', 'KaryawanController@post');
+Route::get('/karyawan/edit/{ID}', 'KaryawanController@edit');
+Route::put('/karyawan/update/{ID}','KaryawanController@update');
