@@ -32,10 +32,10 @@
         </tr>
         @foreach ($karyawan as $item)
         <tr>
-            <td>{{$item->nama}}</td> <td>{{$item->jabatan}}</td> <td>{{$item->umur}}</td> <td>{{$item->alamat}}</td>
+            <td>{{$item->nama}}</td> <td>{{$item->alamat}}</td>
             <td>
-                <a class="btn btn-sm" href="/karyawan/edit/{{$item->ID}}">Edit</a> |
-                <a class="btn btn-sm" href="/karyawan/hapus/{{$item->ID}}">Hapus</a>
+                <a class="btn btn-sm" href="/karyawan/edit/{{$item->id}}">Edit</a> |
+                <a class="btn btn-sm" href="/karyawan/hapus/{{$item->id}}">Hapus</a>
             </td>
         </tr>
         @endforeach

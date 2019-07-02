@@ -46,5 +46,9 @@ Route::get('/pegawai/cari', 'PegawaiController@cari');
 Route::get('/karyawan', 'KaryawanController@index');
 Route::get('/karyawan/tambah', 'KaryawanController@tambah');
 Route::post('/karyawan/post', 'KaryawanController@post');
-Route::get('/karyawan/edit/{ID}', 'KaryawanController@edit');
-Route::put('/karyawan/update/{ID}','KaryawanController@update');
+Route::get('/karyawan/edit/{id}', 'KaryawanController@edit');
+Route::post('/karyawan/update/{id}','KaryawanController@update');
+Route::get('/karyawan/hapus/{id}', 'KaryawanController@hapus');
+
+Route::get('/pengguna', 'PenggunaController@index');
+Route::get('/nama', 'NamaController@index');

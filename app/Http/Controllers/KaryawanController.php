@@ -21,15 +21,12 @@ class KaryawanController extends Controller
     public function post(Request $request){
         //validasi dulu
         $this->validate($request,[
-            'nama' => 'required|min:5|max:20',
-            'jabatan' => 'required',
-            'umur' => 'required|numeric'
+            'nama' => 'required|min:5|max:20'
+      
          ]);
         
         Karyawan::create([
             'nama'=>$request->nama,
-            'jabatan'=>$request->jabatan,
-            'umur'=>$request->umur,
             'alamat'=>$request->alamat
         ]);
         return redirect('/karyawan');
@@ -42,10 +39,15 @@ class KaryawanController extends Controller
     public function update($id, Request $request){
         $karyawan = Karyawan::find($id);
         $karyawan->nama = $request->nama;
-        $karyawan->jabatan = $request->jabatan;
-        $karyawan->umur = $request->umur;
         $karyawan->alamat = $request->alamat;
         $karyawan->save();
+        return redirect('/karyawan');
+    }
+
+    public function hapus($id){
+        $karyawan = Karyawan::find($id);
+        //var_dump($karyawan);
+        $karyawan->delete();
         return redirect('/karyawan');
     }
 }

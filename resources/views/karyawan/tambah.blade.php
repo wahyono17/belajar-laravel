@@ -16,8 +16,6 @@
             {{$errors->first('nama')}}    
         @endif
         <br>
-        Jabatan <input type="text" name="jabatan" required="required" value="{{old('jabatan')}}"><br>
-        Umur <input type="text" name="umur" required="required" value="{{old('umur')}}"><br>
         Alamat <textarea name="alamat" required="required"></textarea> <br>
         <input type="submit" value="Simpan">
     </form>
