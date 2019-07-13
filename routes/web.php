@@ -61,3 +61,6 @@ Route::get('/data/{data_rahasia}', 'DikiController@data_proses');
 
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');
+Route::get('/upload/hapus/{id}', 'UploadController@hapus');
+
+Route::get('/test/first', 'testController@satu');
